@@ -39,5 +39,7 @@ print("Número de peliculas que coincidan con este requisito: {} coincidencias".
 
     #Mostrar cuantas peliculas fueron hechas de 1950 a 1959
     print("Mostrar cuantas peliculas fueron hechas de 1950 a 1959: {} peliculas".format(len(titulos_peliculas[(titulos_peliculas['year'] >= 1950) & (titulos_peliculas['year'] <= 1959)])),"\n") #len() devuelve el número de registros del dataframe.
-
+  #Mostrar todos los roles o papeles que hubo en la pelicula "The Godfather". También mostrar el número total de coincidencias
+    print("Mostrar todos los roles o papeles que hubo en la pelicula 'The Godfather'","\n",elenco[elenco['title'] == 'The Godfather'], "\n") #mediante el uso d corchetes se puede filtrar el dataframe por una condición
+    print("Número de coincidencias: {} coincidencias".format(len(elenco[elenco['title'] == 'The Godfather'])), "\n") #len() devuelve el número de registros del dataframe.
 
