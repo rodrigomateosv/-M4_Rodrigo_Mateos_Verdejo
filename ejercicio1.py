@@ -24,4 +24,12 @@ print(elenco.head()) #head() devuelve los 5 primeros registros del dataframe por
     #Mostrar las peliculas que en el titulo tienen la palabra "Dracula". También mostrar el número total de peliculas que coincidan con este requisito
     print("Mostrar las peliculas que en el titulo tienen la palabra Dracula")
     print(titulos_peliculas[titulos_peliculas['title'].str.contains('Dracula')])  #str.contains() devuelve la subcadena indicada en el parámetro
+print("Número de peliculas que coincidan con este requisito: {} coincidencias".format(len(titulos_peliculas[titulos_peliculas['title'].str.contains('Dracula')])), "\n")
+
+    #Mostrar los 10 titulos más comunes (que más se repiten)
+    print("Mostrar los 10 titulos más comunes")
+    print(titulos_peliculas['title'].value_counts().head(10)) #value_counts() devuelve un dataframe con los valores de la columna indicada en el parámetro y la cantidad de veces que se repite cada uno
+ #Mostrar cual fue la primer pelicula hecha titulada "Romeo and Juliet"
+    print("Mostrar cual fue la primer pelicula hecha titulada 'Romeo and Juliet'")
+    print(titulos_peliculas[titulos_peliculas['title'] == 'Romeo and Juliet'].sort_values(by='year').head(1)) #sort_values() ordena los registros del dataframe por el valor de la columna indicada en el parámetro "by"
 
