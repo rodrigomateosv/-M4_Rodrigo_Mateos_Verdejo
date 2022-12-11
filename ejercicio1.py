@@ -17,5 +17,11 @@ print(elenco.head()) #head() devuelve los 5 primeros registros del dataframe por
 
     #Mostrar el número de registros del dataframe de elenco
     print("Mostrar el número de registros del dataframe de elenco: {}.".format(len(elenco)), "\n") #len() devuelve el número de registros del dataframe.
+ #Mostrar las 5 peliculas más antiguas del listado de titulos
+    print("Mostrar las 5 peliculas más antiguas del listado de titulos", "\n")
+    print(titulos_peliculas.sort_values(by='year').head()) #sort_values() ordena los registros del dataframe por el valor de la columna indicada en el parámetro "by"
 
+    #Mostrar las peliculas que en el titulo tienen la palabra "Dracula". También mostrar el número total de peliculas que coincidan con este requisito
+    print("Mostrar las peliculas que en el titulo tienen la palabra Dracula")
+    print(titulos_peliculas[titulos_peliculas['title'].str.contains('Dracula')])  #str.contains() devuelve la subcadena indicada en el parámetro
 
