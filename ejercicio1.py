@@ -34,5 +34,10 @@ print("Número de peliculas que coincidan con este requisito: {} coincidencias".
     print(titulos_peliculas[titulos_peliculas['title'] == 'Romeo and Juliet'].sort_values(by='year').head(1)) #sort_values() ordena los registros del dataframe por el valor de la columna indicada en el parámetro "by"
   #Listar todas las peliculas que contengan la palabra "Exorcist" ordenadas de la más vieja a la más reciente
     print("Listar todas las peliculas que contengan la palabra 'Exorcist' ordenadas de la más vieja a la más reciente","\n",titulos_peliculas[titulos_peliculas['title'].str.contains('Exorcist')].sort_values(by='year')) #sort_values() ordena los registros del dataframe por el valor de la columna indicada en el parámetro "by"
+ #Mostrar cuantas peliculas fueron hechas en el año 1950
+    print("Mostrar cuantas peliculas fueron hechas en el año 1950: {} peliculas".format(len(titulos_peliculas[titulos_peliculas['year'] == 1950])),"\n") #len() devuelve el número de registros del dataframe.
+
+    #Mostrar cuantas peliculas fueron hechas de 1950 a 1959
+    print("Mostrar cuantas peliculas fueron hechas de 1950 a 1959: {} peliculas".format(len(titulos_peliculas[(titulos_peliculas['year'] >= 1950) & (titulos_peliculas['year'] <= 1959)])),"\n") #len() devuelve el número de registros del dataframe.
 
 
