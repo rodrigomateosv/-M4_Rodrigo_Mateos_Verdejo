@@ -32,4 +32,7 @@ print("Número de peliculas que coincidan con este requisito: {} coincidencias".
  #Mostrar cual fue la primer pelicula hecha titulada "Romeo and Juliet"
     print("Mostrar cual fue la primer pelicula hecha titulada 'Romeo and Juliet'")
     print(titulos_peliculas[titulos_peliculas['title'] == 'Romeo and Juliet'].sort_values(by='year').head(1)) #sort_values() ordena los registros del dataframe por el valor de la columna indicada en el parámetro "by"
+  #Listar todas las peliculas que contengan la palabra "Exorcist" ordenadas de la más vieja a la más reciente
+    print("Listar todas las peliculas que contengan la palabra 'Exorcist' ordenadas de la más vieja a la más reciente","\n",titulos_peliculas[titulos_peliculas['title'].str.contains('Exorcist')].sort_values(by='year')) #sort_values() ordena los registros del dataframe por el valor de la columna indicada en el parámetro "by"
+
 
